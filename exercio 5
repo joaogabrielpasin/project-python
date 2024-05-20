@@ -1,0 +1,4 @@
+n= [1,2,4,5,7,8]
+ 
+for i in range (len(n)-1,-1,-1): 
+    print (n[i])
