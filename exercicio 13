@@ -1,0 +1,20 @@
+l = []
+
+ordem = str(input('deseja que seja ordenada em decrescente?:[S/N]'))
+while True:
+
+    l.append(int(input('digite sua lista')))
+
+    a = str(input('deseja continuar adicionado?[S/N]'))
+
+    if a in 'Nn':
+
+        break
+if ordem == 'S' or 's':
+
+    for i in range (len(l)-1,-1,-1):
+
+        print(l[i])
+l.sort()
+if ordem == 'N' or 'n':
+    print (l)
