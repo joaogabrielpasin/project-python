@@ -1,0 +1,31 @@
+l = []
+
+while True:
+
+    l.append(int(input('digite sua lista')))
+
+    a = str(input('deseja continuar adicionado?[S/N]'))
+
+    if a in 'Nn':
+
+        break
+
+l2 = []
+while True:
+    l2.append(int(input('digite a sua segunda lista')))
+
+    a2 = str(input('deseja continuar adicionando?[S/N]'))
+
+    if a2 in 'Nn':
+
+        break 
+
+print(f'suas listar são:{l} e {l2}')
+
+lu1 = set(l) - set(l2)
+
+lu2 = set(l2) - set(l)
+ 
+unic = list(lu1.union(lu2))
+
+print (unic)
