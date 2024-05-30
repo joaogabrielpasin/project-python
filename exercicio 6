@@ -1,0 +1,25 @@
+import random
+
+
+n = int(input("Digite o número de lançamentos: "))
+
+
+re = []
+
+
+for _ in range(n):
+
+    resul = random.randint(1, 6)
+
+    re.append(resul)
+
+
+con = [0] * 6  
+
+for resultado in re:
+
+    con[resultado - 1] += 1  
+
+for f in range(1, 7):
+
+    print(f"Face {f}: {con[f - 1]} ocorrência(s)")
