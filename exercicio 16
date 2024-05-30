@@ -1,0 +1,30 @@
+def calcular_media_ponderada(notas, pesos):
+
+    somapon = sum(nota * peso for nota, peso in zip(notas, pesos))
+
+    somape = sum(pesos)
+
+    mediapo = somapon / somape
+
+    return mediapo
+
+num_notas = int(input("Digite o número de notas: "))
+
+
+notas = []
+
+pesos = []
+
+for i in range(num_notas):
+
+    nota = float(input(f"Digite a nota {i+1}: "))
+
+    peso = float(input(f"Digite o peso da nota {i+1}: "))
+
+    notas.append(nota)
+
+    pesos.append(peso)
+
+mediap = calcular_media_ponderada(notas, pesos)
+
+print(f"A média ponderada é: {mediap:.2f}")
