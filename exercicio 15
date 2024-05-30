@@ -1,0 +1,63 @@
+def ler_matriz(nome_matriz):
+   
+    num_linhas = int(input(f"Digite o número de linhas da matriz {nome_matriz}: "))
+
+    num_colunas = int(input(f"Digite o número de colunas da matriz {nome_matriz}: "))
+
+    matriz = []
+    
+    for i in range(num_linhas):
+
+        linha = []
+
+        for j in range(num_colunas):
+
+            elemento = int(input(f"Digite o elemento da posição [{i}][{j}] da matriz {nome_matriz}: "))
+
+            linha.append(elemento)
+
+        matriz.append(linha)
+    
+    return matriz
+
+def somar_matrizes(matriz1, matriz2):
+
+    num_linhas = len(matriz1)
+
+    num_colunas = len(matriz1[0])
+    
+    soma_matriz = []
+    
+
+    for i in range(num_linhas):
+
+        linha_soma = []
+
+        for j in range(num_colunas):
+
+            linha_soma.append(matriz1[i][j] + matriz2[i][j])
+
+        soma_matriz.append(linha_soma)
+
+    return soma_matriz
+
+matriz1 = ler_matriz("A")
+
+matriz2 = ler_matriz("B")
+
+
+
+if len(matriz1) != len(matriz2) or len(matriz1[0]) != len(matriz2[0]):
+
+    print("As matrizes devem ter as mesmas dimensões para serem somadas.")
+
+else:
+  
+    matriz_soma = somar_matrizes(matriz1, matriz2)
+
+  
+    print("A soma das matrizes é:")
+
+    for linha in matriz_soma:
+        
+        print(linha)
