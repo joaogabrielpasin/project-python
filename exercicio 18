@@ -1,0 +1,30 @@
+l = []
+contador = 0
+while True:
+
+    l.append(str(input('digite as palavras da  lista')))
+
+    c = str(input('deseja continuat;[S/N]'))
+
+    if c in 'Nn':
+
+        break
+
+while l :  
+    if 'A' or 'a' in l :
+        contador + 1
+        print ('A vogal A apareceu',contador,'vezes')
+    elif 'E' or 'e' in l :
+        contador+1
+        print ('A vogal E apareceu',contador,'vezes')
+    elif 'I' or 'i' in l :  
+        contador+=1
+        print ('A vogal I apareceu',contador,'vezes')
+    elif 'O' or 'o' in l :
+         contador+1
+         print ('A vogal O apareceu',contador,'vezes')
+    elif 'U' or 'u' in l :
+        contador+1
+        print ('A vogal U apareceu',contador,'vezes')
+    else:
+        break
